@@ -24,8 +24,7 @@ This Project serves the  cross-platform-app. This project is built in React-Nati
 - React Native setup
 - Android Studio
 - Node setup
-- [Volta](https://docs.volta.sh/guide/getting-started) | [Why Volta?](https://docs.volta.sh/guide/#why-volta)
-
+- 
 ## **NOTE** : Make sure to set up the proper development environment required to run react-native applications.
 
 You can refer : https://reactnative.dev/docs/environment-setup
