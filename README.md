@@ -1,6 +1,6 @@
 ## Party Planner App
 
-This is the repository of our mobile app, Party planner app is designed to streamline the process of organizing events and trips. By using our app, users can conveniently register for party or trip services, enabling them to access the expertise of top event organizers in their respective cities. Our app aims to alleviate the burdensome task of event planning, allowing users to focus on celebrating even the smallest occasions while saving valuable time.
+This is the repository of our PP app, PP stands for Party planner . This app is designed to streamline the process of organizing events and trips. By using our app, users can conveniently register for party or trip services, enabling them to access the expertise of top event organizers in their respective cities. Our app aims to alleviate the burdensome task of event planning, allowing users to focus on celebrating even the smallest occasions while saving valuable time.
 
 ## Tech Stack
 
