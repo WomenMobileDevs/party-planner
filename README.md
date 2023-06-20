@@ -12,6 +12,8 @@ This Project serves the  cross-platform-app. This project is built in React-Nati
 
 ## First Phase
 
+![image](https://github.com/WomenMobileDevs/party-planner/assets/61110378/9fdba205-5040-43bb-8a47-0cf20bebf13a)
+
 - Phone number Authentication 
 - Dashboard, profile
 - Dashboard features 
@@ -24,8 +26,7 @@ This Project serves the  cross-platform-app. This project is built in React-Nati
 - React Native setup
 - Android Studio
 - Node setup
-- [Volta](https://docs.volta.sh/guide/getting-started) | [Why Volta?](https://docs.volta.sh/guide/#why-volta)
-
+- 
 ## **NOTE** : Make sure to set up the proper development environment required to run react-native applications.
 
 You can refer : https://reactnative.dev/docs/environment-setup
@@ -34,7 +35,7 @@ You can refer : https://reactnative.dev/docs/environment-setup
 
 - First set up with React native environment on your local machine. You can refer the [Environment Setup Link](https://reactnative.dev/docs/environment-setup)
 - If you have done the first point then congrats 🎉now you are good to go !
-- Now clone the mobile app Repo with [Github Repo Link](https://github.com/Real-Dev-Squad/mobile-app)
+- Now clone the mobile app Repo with [Github Repo Link](https://github.com/WomenMobileDevs/party-planner.git)
 - Run the command - `Yarn`.
 - Start contributing.
 
