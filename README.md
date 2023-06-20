@@ -10,6 +10,13 @@ React Native, Kotlin, TypeScript, StyleSheet
 
 This Project serves the  cross-platform-app. This project is built in React-Native/Kotlin.
 
+## PRD
+
+[Product Requirement Doc](https://docs.google.com/document/d/1uJN254OQuTznKY0yYEgGsH2TzkHUptlptNwmT53gxHg/edit)
+
+## Figma 
+
+[Figma design](https://www.figma.com/proto/hjoFBFfkMH2KYuSejP2J9z/Party_Planner?node-id=3-2&scaling=scale-down&page-id=0%3A1)
 ## First Phase
 
 ![image](https://github.com/WomenMobileDevs/party-planner/assets/61110378/9fdba205-5040-43bb-8a47-0cf20bebf13a)
