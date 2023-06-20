@@ -12,6 +12,8 @@ This Project serves the  cross-platform-app. This project is built in React-Nati
 
 ## First Phase
 
+![image](https://github.com/WomenMobileDevs/party-planner/assets/61110378/9fdba205-5040-43bb-8a47-0cf20bebf13a)
+
 - Phone number Authentication 
 - Dashboard, profile
 - Dashboard features 
