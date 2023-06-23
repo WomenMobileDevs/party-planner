@@ -22,6 +22,7 @@
  
  import {Colors} from 'react-native/Libraries/NewAppScreen';
  import Signup from './screens/Signup';
+import Authentication from './screens/Authentication';
  
  const Section: React.FC<
    PropsWithChildren<{
@@ -66,7 +67,8 @@
          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
          backgroundColor={backgroundStyle.backgroundColor}
        />
-       <Signup />
+       {/* <Signup /> */}
+       <Authentication/>
      </SafeAreaView>
    );
  };
