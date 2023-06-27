@@ -22,7 +22,7 @@
  
  import {Colors} from 'react-native/Libraries/NewAppScreen';
  import Signup from './screens/Signup';
-import Authentication from './screens/Authentication';
+import Authentication from './screens/Auth/Authentication';
  
  const Section: React.FC<
    PropsWithChildren<{
