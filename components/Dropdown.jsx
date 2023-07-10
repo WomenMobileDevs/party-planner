@@ -3,7 +3,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import {Dropdown} from 'react-native-element-dropdown';
 import {cities} from '../data.js';
 
-export const DropdownComponent = ({options, onChange, placeholder}) => {
+export default DropdownComponent = ({options, onChange, placeholder}) => {
   const [value, setValue] = useState(null);
   const [isFocus, setIsFocus] = useState(false);
 

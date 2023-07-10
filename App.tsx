@@ -22,7 +22,7 @@ import {
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Signup from './screens/Signup';
-import EventOrganizerForm from './screens/EventOrganizerForm';
+import EventOrganizerRegister from './screens/EventOrganizer/Register';
 
 const Section: React.FC<
   PropsWithChildren<{
@@ -68,7 +68,7 @@ const App = () => {
         backgroundColor={backgroundStyle.backgroundColor}
       />
       {/* <Signup /> */}
-      <EventOrganizerForm />
+      <EventOrganizerRegister />
     </SafeAreaView>
   );
 };
