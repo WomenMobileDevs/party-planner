@@ -22,6 +22,7 @@ import {
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Signup from './screens/Signup';
+import Login from './screens/Login';
 import EventOrganizerRegister from './screens/EventOrganizer/Register';
 import EventAttendeeRegister from './screens/EventAttendee/Register';
 
@@ -70,7 +71,8 @@ const App = () => {
       />
       {/* <Signup /> */}
       {/* <EventOrganizerRegister /> */}
-      <EventAttendeeRegister />
+      <Login />
+      {/* <EventAttendeeRegister /> */}
     </SafeAreaView>
   );
 };
