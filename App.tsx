@@ -24,6 +24,7 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Signup from './screens/Signup';
 import EventOrganizerRegister from './screens/EventOrganizer/Register';
 import EventAttendeeRegister from './screens/EventAttendee/Register';
+import Otpinput from './screens/OtpVerify/Otpinput';
 
 const Section: React.FC<
   PropsWithChildren<{
@@ -70,7 +71,8 @@ const App = () => {
       />
       {/* <Signup /> */}
       {/* <EventOrganizerRegister /> */}
-      <EventAttendeeRegister />
+      {/* <EventAttendeeRegister /> */}
+      <Otpinput/>
     </SafeAreaView>
   );
 };
