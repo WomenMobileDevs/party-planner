@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import React, {useEffect, type PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -19,6 +20,8 @@ import Otpinput from './screens/OtpVerify/Otpinput';
 import LocationSearch from './screens/LocationSearch/LocationSearch';
 import HomeScreen from './screens/HomeScreen';
 import UserTypeSelectionScreen from './screens/UserAccountScreens/UserType';
+import {createStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer} from '@react-navigation/native';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -27,6 +30,8 @@ const App = () => {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  const Stack = createStackNavigator();
+
   useEffect(() => {
     if (Platform.OS === 'android') {
       NativeModules.SplashScreenModule.hide();
@@ -34,9 +39,12 @@ const App = () => {
   }, []);
 
   return (
-    <SafeAreaView style={styles.container}>
-      <UserTypeSelectionScreen />
-    </SafeAreaView>
+    <NavigationContainer >
+      <Stack.Navigator>
+        <Stack.Screen name="UserTypeSelection" component={UserTypeSelectionScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+
   );
 };
 
