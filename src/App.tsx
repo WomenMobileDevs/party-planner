@@ -12,12 +12,13 @@ import {
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Signup from './screens/Signup';
-import Login from './screens/Login';
+import Login from './screens/UserAccountScreens/Login';
 import EventOrganizerRegister from './screens/EventOrganizer/Register';
 import EventAttendeeRegister from './screens/EventAttendee/Register';
 import Otpinput from './screens/OtpVerify/Otpinput';
 import LocationSearch from './screens/LocationSearch/LocationSearch';
 import HomeScreen from './screens/HomeScreen';
+import UserTypeSelectionScreen from './screens/UserAccountScreens/UserType';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -33,43 +34,18 @@ const App = () => {
   }, []);
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      {/* <Signup /> */}
-      {/* <EventOrganizerRegister /> */}
-      {/* <EventAttendeeRegister /> */}
-
-      {/* <Otpinput/> */}
-      {/* <LocationSearch/> */}
-      <HomeScreen />
-
-      <Otpinput />
-
-      <Login />
+    <SafeAreaView style={styles.container}>
+      <UserTypeSelectionScreen />
     </SafeAreaView>
   );
 };
 
+export default App;
+
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
-
-export default App;

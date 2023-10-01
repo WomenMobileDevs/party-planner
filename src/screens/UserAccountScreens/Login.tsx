@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView, Text, Alert} from 'react-native';
-import Button from '../components/Button';
+import Button from '../../components/Button';
 
 const Login = () => {
   return (
