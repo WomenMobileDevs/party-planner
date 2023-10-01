@@ -1,18 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
 import React, {useEffect, type PropsWithChildren} from 'react';
 import {
   SafeAreaView,
-  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
@@ -24,6 +12,7 @@ import {
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Signup from './screens/Signup';
+import Login from './screens/Login';
 import EventOrganizerRegister from './screens/EventOrganizer/Register';
 import EventAttendeeRegister from './screens/EventAttendee/Register';
 import Otpinput from './screens/OtpVerify/Otpinput';
@@ -82,9 +71,16 @@ const App = () => {
       {/* <Signup /> */}
       {/* <EventOrganizerRegister /> */}
       {/* <EventAttendeeRegister /> */}
+
       {/* <Otpinput/> */}
       {/* <LocationSearch/> */}
       <HomeScreen/>
+
+      <Otpinput/>
+
+      <Login />
+
+
     </SafeAreaView>
   );
 };
