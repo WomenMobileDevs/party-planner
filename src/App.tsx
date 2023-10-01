@@ -1,18 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
 import React, {useEffect, type PropsWithChildren} from 'react';
 import {
   SafeAreaView,
-  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
@@ -24,38 +12,12 @@ import {
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Signup from './screens/Signup';
+import Login from './screens/Login';
 import EventOrganizerRegister from './screens/EventOrganizer/Register';
 import EventAttendeeRegister from './screens/EventAttendee/Register';
-
-const Section: React.FC<
-  PropsWithChildren<{
-    title: string;
-  }>
-> = ({children, title}) => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+import Otpinput from './screens/OtpVerify/Otpinput';
+import LocationSearch from './screens/LocationSearch/LocationSearch';
+import HomeScreen from './screens/HomeScreen';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -78,7 +40,15 @@ const App = () => {
       />
       {/* <Signup /> */}
       {/* <EventOrganizerRegister /> */}
-      <EventAttendeeRegister />
+      {/* <EventAttendeeRegister /> */}
+
+      {/* <Otpinput/> */}
+      {/* <LocationSearch/> */}
+      <HomeScreen />
+
+      <Otpinput />
+
+      <Login />
     </SafeAreaView>
   );
 };
