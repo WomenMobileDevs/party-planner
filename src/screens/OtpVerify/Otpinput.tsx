@@ -14,8 +14,6 @@ import { OtpStyle } from './styles';
 import COLORS from '../../constants/colors/Colors';
 const DATA = [0, 0, 0, 0];
 
-
-
 const Otpinput = () => {
   return (
     <View style={OtpStyle.container}>

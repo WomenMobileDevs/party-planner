@@ -20,8 +20,7 @@ import Otpinput from './screens/OtpVerify/Otpinput';
 import LocationSearch from './screens/LocationSearch/LocationSearch';
 import HomeScreen from './screens/HomeScreen';
 import UserTypeSelectionScreen from './screens/UserAccountScreens/UserType';
-import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
+import LoginScreen from './screens/UserAccountScreens/Login';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -30,7 +29,7 @@ const App = () => {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  const Stack = createStackNavigator();
+  // const Stack = createStackNavigator();
 
   useEffect(() => {
     if (Platform.OS === 'android') {
@@ -39,12 +38,14 @@ const App = () => {
   }, []);
 
   return (
-    <NavigationContainer >
-      <Stack.Navigator>
-        <Stack.Screen name="UserTypeSelection" component={UserTypeSelectionScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-
+    // <NavigationContainer >
+    //   <Stack.Navigator>
+    //     <Stack.Screen name="UserTypeSelection" component={UserTypeSelectionScreen} />
+    //   </Stack.Navigator>
+    // </NavigationContainer>
+    <SafeAreaView style={styles.container}>
+      <LoginScreen />
+    </SafeAreaView>
   );
 };
 
