@@ -16,6 +16,8 @@ import Login from './screens/Login';
 import EventOrganizerRegister from './screens/EventOrganizer/Register';
 import EventAttendeeRegister from './screens/EventAttendee/Register';
 import Otpinput from './screens/OtpVerify/Otpinput';
+import LocationSearch from './screens/LocationSearch/LocationSearch';
+import HomeScreen from './screens/HomeScreen';
 
 const Section: React.FC<
   PropsWithChildren<{
@@ -69,9 +71,15 @@ const App = () => {
       {/* <Signup /> */}
       {/* <EventOrganizerRegister /> */}
       {/* <EventAttendeeRegister /> */}
+
+      {/* <Otpinput/> */}
+      {/* <LocationSearch/> */}
+      <HomeScreen/>
+
       <Otpinput/>
 
       <Login />
+
 
     </SafeAreaView>
   );
