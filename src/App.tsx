@@ -19,36 +19,6 @@ import Otpinput from './screens/OtpVerify/Otpinput';
 import LocationSearch from './screens/LocationSearch/LocationSearch';
 import HomeScreen from './screens/HomeScreen';
 
-const Section: React.FC<
-  PropsWithChildren<{
-    title: string;
-  }>
-> = ({children, title}) => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
-
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -74,13 +44,11 @@ const App = () => {
 
       {/* <Otpinput/> */}
       {/* <LocationSearch/> */}
-      <HomeScreen/>
+      <HomeScreen />
 
-      <Otpinput/>
+      <Otpinput />
 
       <Login />
-
-
     </SafeAreaView>
   );
 };
