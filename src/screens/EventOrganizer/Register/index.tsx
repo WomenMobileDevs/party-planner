@@ -6,7 +6,7 @@ import {
   ScrollView,
 } from 'react-native';
 import React, {useState} from 'react';
-import {event_list, gender_list} from '../../../data';
+import {event_list, gender_list} from '../../../../data';
 import DatePicker from 'react-native-date-picker';
 import DropdownComponent from '../../../components/Dropdown';
 import {RegisterStyle} from './styles';
@@ -18,14 +18,14 @@ const Register: React.FC = () => {
   const [mobile_number, setMobileNumber] = useState('');
   const [gender, setGender] = useState('');
   const [city, setCity] = useState('');
-  const [interest, setInterest] = useState('');
+  const [organizing, setOrganizing] = useState('');
   const [birth_date, setBirthDate] = useState<Date | null>(null);
   const [open, setOpen] = useState(false);
   return (
     <ScrollView>
       <View style={RegisterStyle.container}>
         <View style={RegisterStyle.form}>
-          <Text style={RegisterStyle.title}>{REGISTER_LABELS.heading}</Text>
+          <Text style={RegisterStyle.title}>{REGISTER_LABELS.organizer}</Text>
           <View style={RegisterStyle.input_container}>
             <Text style={RegisterStyle.label}>
               {REGISTER_LABELS.mobile_number_label}
@@ -104,12 +104,12 @@ const Register: React.FC = () => {
           </View>
           <View style={RegisterStyle.input_container}>
             <Text style={RegisterStyle.label}>
-              {REGISTER_LABELS.interest_label}
+              {REGISTER_LABELS.organizing_label}
             </Text>
             <DropdownComponent
               options={event_list}
-              onChange={(item: {value: string}) => setInterest(item.value)}
-              placeholder={REGISTER_LABELS.interest_placeholder}
+              onChange={(item: {value: string}) => setOrganizing(item.value)}
+              placeholder={REGISTER_LABELS.organizing_placeholder}
             />
           </View>
 
