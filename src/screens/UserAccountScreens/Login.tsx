@@ -41,7 +41,8 @@ const LoginScreen = () => {
 
     if (user && otp === user.otp.toString()) {
       // OTP is valid; navigate to the home screen
-      Alert.alert('Login successful!'); // Replace with navigation code
+      Alert.alert('Login successful!');
+      // Navigation to home screen of event attendees
     } else {
       Alert.alert('Invalid OTP. Please try again.');
     }
@@ -70,7 +71,6 @@ const LoginScreen = () => {
             keyboardType="numeric"
             maxLength={4}
           />
-          <Otpinput />
           <Button title="Login" onPress={handleLogin} />
         </>
       )}

@@ -10,8 +10,7 @@ const HOMESCREEN_LABELS = {
   gender_placeholder: 'Select Gender',
   city_label: 'City',
   city_placeholder: 'Enter your city',
-  organizing_label:"Organizing",
+  organizing_label: 'Organizing',
   organizing_placeholder: 'Select Event',
-
-  };
-  export default HOMESCREEN_LABELS
+};
+export default HOMESCREEN_LABELS;

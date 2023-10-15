@@ -8,9 +8,9 @@ const UserTypeSelectionScreen = ({navigation}) => {
   const handleUserTypeSelection = userType => {
     setSelectedUserType(userType);
     if (userType === 'Event Attendees') {
-      //   navigation.navigate('EventGoerLoginScreen');
+      navigation.navigate('EventGoerHomeScreen');
     } else if (userType === 'Event Planner') {
-      //   navigation.navigate('EventPlannerLoginScreen');
+      navigation.navigate('EventPlannerHomeScreen');
     }
   };
 

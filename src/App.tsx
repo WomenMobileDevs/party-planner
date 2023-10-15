@@ -21,15 +21,13 @@ import LocationSearch from './screens/LocationSearch/LocationSearch';
 import HomeScreen from './screens/HomeScreen';
 import UserTypeSelectionScreen from './screens/UserAccountScreens/UserType';
 import LoginScreen from './screens/UserAccountScreens/Login';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import EventPlannerHomeScreen from './screens/EventPlannerHomeScreen';
+import EventGoerHomeScreen from './screens/EventGoerHomeScreen';
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  // const Stack = createStackNavigator();
+  const Stack = createStackNavigator();
 
   useEffect(() => {
     if (Platform.OS === 'android') {
@@ -38,16 +36,29 @@ const App = () => {
   }, []);
 
   return (
-    // <NavigationContainer >
-    //   <Stack.Navigator>
-    //     <Stack.Screen name="UserTypeSelection" component={UserTypeSelectionScreen} />
-    //   </Stack.Navigator>
-    // </NavigationContainer>
-    <SafeAreaView style={styles.container}>
-      <LoginScreen />
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="UserTypeSelection"
+          component={UserTypeSelectionScreen}
+        />
+        <Stack.Screen
+          name="EventGoerHomeScreen"
+          component={EventGoerHomeScreen}
+        />
+
+        <Stack.Screen
+          name="EventPlannerHomeScreen"
+          component={EventPlannerHomeScreen}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
+
+// <SafeAreaView style={styles.container}>
+//   <LoginScreen />
+// </SafeAreaView>
 
 export default App;
 
