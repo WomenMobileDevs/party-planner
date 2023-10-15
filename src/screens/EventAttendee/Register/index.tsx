@@ -6,26 +6,26 @@ import {
   ScrollView,
 } from 'react-native';
 import React, {useState} from 'react';
-import {event_list, gender_list} from '../../../data';
+import {event_list, gender_list} from '../../../../data';
 import DatePicker from 'react-native-date-picker';
 import DropdownComponent from '../../../components/Dropdown';
 import {RegisterStyle} from './styles';
 import REGISTER_LABELS from './register_labels';
 import STRINGS from '../../../constants/strings/Strings';
 
-const Register: React.FC = () => {
+const RegisterEA: React.FC = () => {
   const [name, setName] = useState('');
   const [mobile_number, setMobileNumber] = useState('');
   const [gender, setGender] = useState('');
   const [city, setCity] = useState('');
-  const [organizing, setOrganizing] = useState('');
+  const [interest, setInterest] = useState('');
   const [birth_date, setBirthDate] = useState<Date | null>(null);
   const [open, setOpen] = useState(false);
   return (
     <ScrollView>
       <View style={RegisterStyle.container}>
         <View style={RegisterStyle.form}>
-          <Text style={RegisterStyle.title}>{REGISTER_LABELS.organizer}</Text>
+          <Text style={RegisterStyle.title}>{REGISTER_LABELS.heading}</Text>
           <View style={RegisterStyle.input_container}>
             <Text style={RegisterStyle.label}>
               {REGISTER_LABELS.mobile_number_label}
@@ -104,12 +104,12 @@ const Register: React.FC = () => {
           </View>
           <View style={RegisterStyle.input_container}>
             <Text style={RegisterStyle.label}>
-              {REGISTER_LABELS.organizing_label}
+              {REGISTER_LABELS.interest_label}
             </Text>
             <DropdownComponent
               options={event_list}
-              onChange={(item: {value: string}) => setOrganizing(item.value)}
-              placeholder={REGISTER_LABELS.organizing_placeholder}
+              onChange={(item: {value: string}) => setInterest(item.value)}
+              placeholder={REGISTER_LABELS.interest_placeholder}
             />
           </View>
 
@@ -124,4 +124,4 @@ const Register: React.FC = () => {
   );
 };
 
-export default Register;
+export default RegisterEA;
