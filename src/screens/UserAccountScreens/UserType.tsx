@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import COLORS from '../../constants/colors/Colors';
+import {setUserType} from '../../redux/Actions';
+import {connect} from 'react-redux';
 
 const UserTypeSelectionScreen = ({navigation}) => {
   const [selectedUserType, setSelectedUserType] = useState('');
@@ -8,9 +10,9 @@ const UserTypeSelectionScreen = ({navigation}) => {
   const handleUserTypeSelection = userType => {
     setSelectedUserType(userType);
     if (userType === 'Event Attendees') {
-      navigation.navigate('EventGoerHomeScreen');
+      navigation.navigate('UserForm');
     } else if (userType === 'Event Planner') {
-      navigation.navigate('EventPlannerHomeScreen');
+      navigation.navigate('UserForm'); // event planner
     }
   };
 
@@ -72,4 +74,15 @@ const styles = StyleSheet.create({
   },
 });
 
-export default UserTypeSelectionScreen;
+const mapStateToProps = state => ({
+  selectedUserType: state.userType, // Map the selectedUserType from Redux state
+});
+
+const mapDispatchToProps = {
+  setUserType, // Map the setUserType action to props
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(UserTypeSelectionScreen);

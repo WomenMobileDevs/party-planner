@@ -25,9 +25,15 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import EventPlannerHomeScreen from './screens/EventPlannerHomeScreen';
 import EventGoerHomeScreen from './screens/EventGoerHomeScreen';
+import {applyMiddleware, createStore} from 'redux';
+import userTypeReducer from './redux/Reducer';
+import thunk from 'redux-thunk';
+import {Provider, useSelector} from 'react-redux';
+import UserForm from './screens/UserForm';
 
 const App = () => {
   const Stack = createStackNavigator();
+  const store = createStore(userTypeReducer, applyMiddleware(thunk));
 
   useEffect(() => {
     if (Platform.OS === 'android') {
@@ -36,23 +42,28 @@ const App = () => {
   }, []);
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="UserTypeSelection"
-          component={UserTypeSelectionScreen}
-        />
-        <Stack.Screen
-          name="EventGoerHomeScreen"
-          component={EventGoerHomeScreen}
-        />
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="UserTypeSelection"
+            component={UserTypeSelectionScreen}
+          />
 
-        <Stack.Screen
-          name="EventPlannerHomeScreen"
-          component={EventPlannerHomeScreen}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+          <Stack.Screen
+            name="EventGoerHomeScreen"
+            component={EventGoerHomeScreen}
+          />
+
+          <Stack.Screen
+            name="EventPlannerHomeScreen"
+            component={EventPlannerHomeScreen}
+          />
+
+          <Stack.Screen name="UserForm" component={UserForm} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
 };
 
