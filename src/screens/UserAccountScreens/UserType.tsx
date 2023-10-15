@@ -8,6 +8,7 @@ const UserTypeSelectionScreen = ({navigation}) => {
   const [selectedUserType, setSelectedUserType] = useState('');
 
   const handleUserTypeSelection = userType => {
+    setUserType(userType)
     setSelectedUserType(userType);
     if (userType === 'Event Attendees') {
       navigation.navigate('UserForm');

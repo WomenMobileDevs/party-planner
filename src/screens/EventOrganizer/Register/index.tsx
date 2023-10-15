@@ -13,7 +13,7 @@ import {RegisterStyle} from './styles';
 import REGISTER_LABELS from './register_labels';
 import STRINGS from '../../../constants/strings/Strings';
 
-const Register: React.FC = () => {
+const RegisterEO: React.FC = () => {
   const [name, setName] = useState('');
   const [mobile_number, setMobileNumber] = useState('');
   const [gender, setGender] = useState('');
@@ -124,4 +124,4 @@ const Register: React.FC = () => {
   );
 };
 
-export default Register;
+export default RegisterEO;
